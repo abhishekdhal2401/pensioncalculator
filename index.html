@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <!-- font type used is montserrat and lato from google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+<!-- this is a favicon -->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" >
+
+  <title>Pension Calculator</title>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<div id="loading"></div>
+<div id="content">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="images/logo.png" alt="logo" width="150px" ></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#calculate">CALCULATE</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid back-image">
+<div class="jumbotron text-center">
+  <br><br><br><br><br><br>
+  <h1>Pension Calculator</h1>
+  <p>(For Central Govt. Employees as per 7th Pay Commission)</p>
+  <br>
+  <br>
+
+<div id ="r">
+      <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
+      <a href="#calculate"><p>Calculate your Pension</p></a>
+    </div>
+
+</div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Pension Calculator</h2><br>
+
+      <!-- <h4>This calculating tool helps the retiree or the pensioner or anyone to know about how the pension is calculated. </h4><br> -->
+      <h4 id="about1">Many Central Government employees retire every month on superannuation. Some opt to take voluntary retirement before the superannuation. Unfortunately, some officers die before their superannuation.  The officers of higher grades of course find no problem in the calculation of their retirement benefits. However, lower grade officers even find it difficult to know the approximate amount of retirement benefit. The family members of the deceased officers face the difficulties to know the approximate amount they will get. They request the officers of account section of their organisation even to get an idea of the approximate amount. Using this Pension Calculator, the retirees, the officers who is preparing to opt for voluntary retirement before superannuation or the wife or family members of the deceased officers can calculate the exact amount of Gratuity, Pension, Commuted amount etc correctly.  This is our small effort to help these officers.</h4>
+      <br>
+      <!-- <a href="#calculate"><button class="btn btn-default btn-lg">TRY IT</button></a> -->
+    </div>
+    <div class="imagepad col-sm-4">
+      <div class="slideanim"><img src="images/image1.jpg" class="img-rounded img-responsive" alt="image" ></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+
+    <div class="imagepad1 col-sm-4">
+      <div class="slideanim"><img src="images/b.jpg" class="img-rounded img-responsive" alt="image"></div>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Mission</h2>
+      <h4>Presently, the retirees or the spouse of the deceased employees or their legal heirs have to apply for the pension, gratuity etc on the newly designed <a style="color: #f4511e; text-decoration: none;"  href="https://bhavishya.nic.in" target="_blank">
+          <strong>"Bhavisya"</strong></a> portal.  They have to submit the filled in forms to the HOD of their department for process of the pension papers. After that, the papers will be submitted to the concerned Pay & Accounts Officer for necessary actions. Practically, they get it done through the officers of the department who look after the pension case. The applicants do not know whether the calculations are correct or not. The amounts payable, such as gratuity, commuted value, pension after commutation etc are correct or not. Some mistakes may occur during entering the data by them.
+          <br>
+          So, before, submitting the data in Bhavisya portal, the retirees, officers opted for voluntary retirement and the wife or other legal heir of the deceased officers can ensure the amount of Gratuity, Commuted Value and pensions after commutations etc by this calculator. They can compare these amounts with the amount calculated through Bhavishya portal. 
+          This calculator eliminates the need of manual computation and processing of the input data. With this calculator the user can obtain the exact values of the benefits by providing minimum required input data.</h4>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Container (calculating Section) -->
+<div id="calculate" class="container-fluid">
+  <div class="text-center">
+    <h2>Choose the type of your retirement</h2>
+    <!-- <h4></h4> -->
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Superannuation</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Superannuation</strong>
+
+          <p>A superannuation pension shall be granted to a Government servant who is retired on his attaining the age of superannuation. As of now the superannation age for central government employee is 60 years from his/her date of birth.</p>
+        </div>
+        <div class="panel-footer">
+          <a href="super.html"><button class="btn btn-lg">Calculate</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>VRS</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Voluntary Retirtement Scheme</strong></p>
+
+          <p>Any Government servant can apply for voluntary retirement, three months in advance, only after the completion of twenty years of his qualifying service, provided there is no vigilance or Departmental Enquiry pending/initiated against him/her.</p>
+
+        </div>
+        <div class="panel-footer">
+          <a href="vrs.html"><button class="btn btn-lg">Calculate</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>DEATH PENSION</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Death Pension</strong></p>
+          <p>The Death Pension, which may also be referred to as Survivors Pension benefit, is a tax-free monetary benefit payable to a low-income, un-remarried surviving spouse and/or unmarried child/child(ren) of a deceased Veteran with wartime service.</p>
+
+        </div>
+        <div class="panel-footer">
+          <a href="death.html"><button class="btn btn-lg">Calculate</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- parallax image -->
+<div id="team" class=" container-fluid paral ">
+<div class="container-fluid text-center parallel">
+  <h2 style="font-size:35px; letter-spacing: 2px; color: #d3d3d3">TEAM</h2>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-3 col-xs-6">
+      <div class="slideanim"><p class="text-center" style="color: #DCDCDC"><strong>Abhishek Dhal</strong></p>
+      <a href="#d" data-toggle="collapse">
+        <img src="images/abhi.jpg" class="img-circle person" alt="Abhisek Dhal" width="150" height="150">
+      </a>
+      <div id="d" class="collapse">
+        <a href="https://github.com/abhishekdhal2401" target="_"><i class="fab fa-github giticon "></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/abhishek-dhal-784a98181/" target="_"><i class="fab fa-linkedin linicon"></i></a><br><br>
+        <p style="color: #DCDCDC">Undergratuate <br> College Of Engineering And Technology</p>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <div class="slideanim"><p class="text-center" style="color: #DCDCDC"><strong>Adityesh Mishra</strong></p>
+      <a href="#d2" data-toggle="collapse">
+        <img src="images/adi.jpg" class="img-circle person" alt="Adityesh Mishra" width="150" height="150">
+      </a>
+      <div id="d2" class="collapse">
+        <a href="https://github.com/Adityesh" target="_blank"><i class="fab fa-github giticon "></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/adityesh-mishra-b3446716b/" target="_blank"><i class="fab fa-linkedin linicon"></i></a><br><br>
+        <p style="color: #DCDCDC">Undergratuate <br> College Of Engineering And Technology</p>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <div class="slideanim"><p class="text-center" style="color: #DCDCDC"><strong>Haris Umaid</strong></p>
+      <a href="#d4" data-toggle="collapse">
+        <img src="images/haris.jpg" class="img-circle person" alt="Haris Umaid" width="150" height="150">
+      </a>
+      <div id="d4" class="collapse">
+        <a href="https://github.com/harisumaid" target="_blank"><i class="fab fa-github giticon "></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/haris-umaid-99b520173/" target="_blank"><i class="fab fa-linkedin linicon"></i></a><br><br>
+        <p style="color: #DCDCDC">Undergratuate <br> College Of Engineering And Technology</p>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <div class="slideanim"><p class="text-center" style="color: #DCDCDC"><strong>Arijit Sahoo</strong></p>
+      <a href="#d3" data-toggle="collapse">
+        <img src="images/image1.jpg" class="img-circle person" alt="Arijit Sahoo" width="150" height="150">
+      </a>
+      <div id="d3" class="collapse">
+        <a href="https://github.com/tijira-1999" target="_blank"><i class="fab fa-github giticon "></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" target="_blank"><i class="fab fa-linkedin linicon"></i></a><br><br>
+        <p style="color: #DCDCDC">Undergratuate <br> College Of Engineering And Technology</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+
+  <br>
+
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Bhubaneswar,Odisha</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9876543210</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> arijitsahoo1999@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+
+      <textarea style="resize: none;" class="form-control" id="comments" name="comments" placeholder="Comment" rows="6"></textarea><br>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<!-- <img src="images/foot.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+<footer class="container-fluid text-center  bg-grey">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Designed and developed by <a href="https://github.com/tijira-1999" title="Visit my github page" target="_blank">arijit sahoo</a></p>
+</footer>
+
+
+<script src="function.js"></script>
+
+</body>
+
+
+
+</html>
