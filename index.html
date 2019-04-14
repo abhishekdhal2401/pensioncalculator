@@ -12,6 +12,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+<!--  -->
+
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css">
@@ -132,7 +138,7 @@
           <h1>VRS</h1>
         </div>
         <div class="panel-body">
-          <p><strong>Voluntary Retirtement Scheme</strong></p>
+          <p><strong>Voluntary Retirement Scheme</strong></p>
 
           <p>Any Government servant can apply for voluntary retirement, three months in advance, only after the completion of twenty years of his qualifying service, provided there is no vigilance or Departmental Enquiry pending/initiated against him/her.</p>
 
@@ -233,27 +239,29 @@
       <p><span class="glyphicon glyphicon-envelope"></span> harisumaid27@gmail.com</p>
       <p><span class="glyphicon glyphicon-envelope"></span> adityeshmishra98@gmail.com</p>
     </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+    <form class="" id="fireForm">
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+
+        <textarea style="resize: none;" class="form-control" id="comments" name="comments" placeholder="Comment" rows="6" required></textarea><br>
+
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" id="fireStore" type="submit">Send <span class="badge" id="showSuccess"></span> </button>
+          </div>
         </div>
+
+        <br>
+
       </div>
-
-      <textarea style="resize: none;" class="form-control" id="comments" name="comments" placeholder="Comment" rows="6"></textarea><br>
-
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-
-      <br>
-
-    </div>
+    </form>
   </div>
   </div>
 </div>
@@ -268,8 +276,12 @@
   <p>Designed and developed by <br><strong>Arijit Sahoo, Adityesh Mishra, Abhishek Dhal, Haris Umaid.</strong></p>
 </footer>
 
+<!-- Firbase script -->
 
+<!-- <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script> -->
+<script src="firestore.js" charset="utf-8"></script>
 <script src="function.js"></script>
+
 
 </body>
 
